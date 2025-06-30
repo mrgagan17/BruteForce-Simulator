@@ -10,13 +10,13 @@ try:
         for line in wordlist:
             password = line.strip()
             if loginsystem.login(username, password):
-                print(f"[✅] Password found: {password}")
+                print(f"Password found: {password}")
                 found = True
                 break
             else:
-                print(f"[-] Tried: {password}")
+                print(f"Tried: {password}")
 except FileNotFoundError:
-    print("❌ rockyou.txt not found. Please download and place it in the same folder.")
+    print("rockyou.txt not found. Please download and place it in the same folder.")
 
 if not found:
-    print("❌ Password not found in wordlist.")
+    print("Password not found in wordlist.")
